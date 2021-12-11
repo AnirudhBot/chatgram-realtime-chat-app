@@ -41,6 +41,7 @@ io.on('connection', socket => {
     //Listening chatMessage
     socket.on('chatMessage', msg=> {
         const user = currentUser(socket.id)
+        let index = 0
 
         //Toxicity check
         const threshold = 0.9
@@ -48,13 +49,16 @@ io.on('connection', socket => {
             model.classify([msg]).then(predictions => {
                 for(let i=0; i<predictions.length; i++) {
                     if(predictions[i].results[0].match === true) {
-                        return socket.emit('message', messageFormat(`--Chatgram Bot--`,'Chatgram finds your text toxic. Please try to be respectful to others !'))
+                        index = 1
+                        return socket.emit('message', messageFormat(`--Chatgram Bot--`,'Your message has been deleted as it violates our anti-toxicity guidelines. Please try to be respectful to others !'))
                     }            
+                }
+
+                if(index === 0) {
+                    io.to(user.channel).emit('message', messageFormat(user.username, msg))
                 }
             })
         })
-
-        io.to(user.channel).emit('message', messageFormat(user.username, msg))
 
     })
 
