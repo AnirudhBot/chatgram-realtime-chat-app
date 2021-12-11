@@ -1,0 +1,200 @@
+/* Custom ScrollBar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray; 
+    border-radius: 6px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(39, 39, 39); 
+    border-radius: 10px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: gray; 
+}
+
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+
+body {
+    background-color: lightcyan;
+}
+
+.home,.chat-home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: lightskyblue;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.header {
+    text-align: center;
+    font-size: 1.6em;
+}
+
+.join-channel {
+    text-align: center;
+}
+
+.submit {
+    padding: 0.2em;
+    background-color:lightcyan;
+    border-radius: 4px;
+}
+
+.cursor-class {
+    cursor: pointer;
+}
+
+/* ------------------------------------------------ */
+
+.chat-home {
+    display: flex;
+    width: 60vw;
+    height: 80vh;
+    padding: 0.5em 0;
+}
+
+.section-1 {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0.8em;
+}
+
+.section-2 {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin: 0.8em;
+}
+
+.participant-list {
+    flex-grow: 1;
+    overflow: auto;
+    overflow-wrap: break-word;
+    margin-bottom: 15px;
+}
+
+i {
+    margin: 0.1em 0.4em;
+    cursor: pointer;
+}
+
+.participant-heading {
+    font-size: 1.2em;
+}
+
+
+.channel-name {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow: auto;
+    overflow-wrap: break-word;
+    margin-bottom: 15px;
+}
+
+.message {
+    background-color: lightcyan;
+    border-radius: 4px;
+    margin: 0 0.5em 0.5em 0.5em;
+    padding: 0.2em;
+    width: 95%;
+}
+
+.name {
+    font-size: 0.95em;
+    color: salmon;
+    margin-right: 0.3em;
+}
+
+.time {
+    font-size: 0.8em;
+    color:salmon;
+}
+
+.send-message {
+    display: flex;
+    justify-content: center;
+}
+
+.chat {
+    flex-grow: 0.9;
+}
+
+.chat input {
+    width: 100%;
+}
+
+.fa-paper-plane {
+    font-size: 1.3em;
+}
+
+
+
+
+  @media (max-width: 1199px) {
+      .chat-home {
+          width: 70vw;
+          height: 70vh;
+      }
+  }
+
+
+  @media (max-width: 991px) {
+      .participant-heading {
+          font-size: 1em;
+      }
+  }
+
+  @media (max-width: 575px) {
+      ::-webkit-scrollbar {
+          width: 6px;
+      }
+
+      .section-1 {
+          display: none;
+      }
+      
+      .section-2 {
+          width: 90%;
+      }
+
+      .channel-name {
+          font-size: 1.1em;
+      }
+
+      .name {
+          font-size: 0.8em;
+      }
+
+      .time {
+          font-size: 0.7em;
+      }
+
+
+
+  }

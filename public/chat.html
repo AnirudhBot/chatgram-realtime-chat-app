@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
+
+    <!-- stylesheet-->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Chatgram</title>
+</head>
+<body>
+    <div class="chat-home">
+        <div class="section-1">
+            <div class="participants">
+                <div class="participant-heading">
+                    <span><i class="fas fa-users"></i></span>
+                    Participants
+                </div>
+                <br>
+                <hr>
+                <br>
+            </div>
+            <div class="participant-list">
+
+            </div>
+            <div class="leave-chat">
+                <form action="./index.html">
+                    <button class="submit cursor-class" type="submit"><i class="fas fa-sign-out-alt"></i>Leave</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="section-2">
+            <div class="channel-name">
+
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="messages">
+                
+            </div>
+            <div class="send-message">
+                <div class="chat">
+                    <input class="submit inputMsg" type="text" placeholder="Type your message..." onfocus="placeholder.value=''">
+                </div>
+                <div>
+                    <i class="fas fa-paper-plane submitBtn"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.2/qs.min.js" integrity="sha512-ErYZLDi4WRoox2JhOIADWBydTRhMJ0KIXnv5C1GvuY8YooLGapnebaM3iRGhwS6/E9ONXj0MRXp6bhu73sdFkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>

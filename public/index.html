@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
+
+    <!-- stylesheet-->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Chatgram</title>
+</head>
+<body>
+    <div class="home">
+        <div class="header">
+            <i class="far fa-comments"></i>
+            <span class="app-name">Chatgram</span>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <div class="join">
+            <form action="chat.html">
+                <label>Username: </label>
+                <input class="index" type="text" name="username" required>
+                <br>
+                <br>
+                <label>Select Channel: </label>
+                <select name="channel">
+                    <option value="Chill">Chill</option>
+                    <option value="Development">Development</option>
+                    <option value="Open Source">Open Source</option>
+                    <option value="Blockchain">Blockchain</option>
+                    <option value="ML and AI">ML and AI</option>
+                    <option value="DSA and CP">DSA and CP</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <div class="join-channel">
+                    <input class="submit cursor-class" type="submit" value="Join Channel">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
