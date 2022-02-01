@@ -22,6 +22,7 @@
     background: gray; 
 }
 
+/* ------------------------------------------------- */
 
 
 *{
@@ -33,6 +34,18 @@
 
 body {
     background-color: lightcyan;
+}
+
+
+/* --------- landingPage ---------- */
+.fixedHeader {
+    padding: 1.1rem 0;
+    background: lightskyblue;
+}
+
+.fixedHeader h1 {
+    font-size: 2rem;
+    text-align: center;
 }
 
 .home,.chat-home {
@@ -64,8 +77,10 @@ body {
     cursor: pointer;
 }
 
+
 /* ------------------------------------------------ */
 
+/* -------- chatPage -------- */
 .chat-home {
     display: flex;
     width: 60vw;
@@ -155,6 +170,7 @@ i {
 
 
 
+/* -------Media Queries------ */
 
   @media (max-width: 1199px) {
       .chat-home {
@@ -194,7 +210,5 @@ i {
       .time {
           font-size: 0.7em;
       }
-
-
 
   }
